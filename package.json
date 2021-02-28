@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/hyj111/VuePersonalComponents/issues"
   },
-  "homepage": "https://github.com/hyj111/VuePersonalComponents#readme"
+  "homepage": "https://github.com/hyj111/VuePersonalComponents#readme",
+  "dependencies": {
+    "vue": "^2.6.12"
+  }
 }
