@@ -32,11 +32,11 @@
 </head>
 <body>
   <div id="app">
-    <g-button icon="settings">按钮</g-button>
-    <g-button >按钮</g-button>
-    <g-button icon-position='right' icon="settings">按钮</g-button>
+    <g-button icon="settings" :loading='loading1' @click="loading1=!loading1">按钮</g-button>
+    <g-button :loading='true'>按钮</g-button>
+    <g-button icon-position='right' icon="settings" :loading='true'>按钮</g-button>
   </div>
 </body>
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_2392703_2uemdiyt3r.js"></script>
+<script src="//at.alicdn.com/t/font_2392703_27ztpspvd3g.js"></script>
 </html>
