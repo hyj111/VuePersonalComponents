@@ -43,7 +43,8 @@ export default {
   border-radius: var(--border-radius);
   background: var(--button-bg);
   &:hover {
-    border-color: var(--border-color-hover);
+    // border-color: var(--border-color-hover);
+    border-color:red;
   }
   &:active {
     background-color: var(--button-active-bg);
