@@ -1,6 +1,6 @@
 {
   "name": "vuepersonalcomponents",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "这是一个ui框架",
   "main": "dist/index.js",
   "scripts": {
