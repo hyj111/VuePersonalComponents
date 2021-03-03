@@ -7,8 +7,13 @@
   </button>
 </template>
 <script>
+import Icon from './icon'
+
 export default {
   //   props: ["icon", "iconPosition"],
+  components: {
+    'g-icon': Icon
+  },
   props: {
     icon: {},
 		loading: {
@@ -44,7 +49,7 @@ export default {
   background: var(--button-bg);
   &:hover {
     // border-color: var(--border-color-hover);
-    border-color:red;
+    border-color: var(--border-color-hover);
   }
   &:active {
     background-color: var(--button-active-bg);
