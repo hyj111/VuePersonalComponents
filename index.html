@@ -32,14 +32,19 @@
 </head>
 <body>
   <div id="app">
-    <g-button icon="settings" :loading='loading1' @click="loading1=!loading1">按钮</g-button>
+    <!-- <g-button icon="settings" :loading='loading1' @click="loading1=!loading1">按钮</g-button>
     <g-button :loading='true'>按钮</g-button>
     <g-button icon-position='right' icon="settings" :loading='true'>按钮</g-button>
     <g-button-group>
       <g-button icon="left">上一页</g-button>
       <g-button >更多</g-button>
       <g-button icon="right">下一页</g-button>
-    </g-button-group>
+    </g-button-group> -->
+
+    <g-input value="张三" disabled></g-input>
+    <g-input value="李四"></g-input>
+    <g-input value="王五" readonly></g-input>
+    <g-input value="zxx" error="姓名不小于3个字"></g-input>
     <div id="test"></div>
   </div>
 </body>
