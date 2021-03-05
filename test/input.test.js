@@ -70,50 +70,17 @@ describe('Button', () => {
 				}).$mount()
 				const callback = sinon.fake()
 				vm.$on(eventName,callback)
-				// 触发input的change事件
+				// 触发input的事件
 				let event = new Event(eventName)
+				Object.defineProperty(event,'target',{
+					value:{value:'hi'}, enumerable:true
+				})
 				const inputElement = vm.$el.querySelector('input')
 				inputElement.dispatchEvent(event)
-				// 希望触发chuange事件，且第一个回调函数是event
-				expect(callback).to.have.been.calledWith(event)
+				// 希望触发事件，且第一个回调函数是event
+				expect(callback).to.have.been.calledWith('hi')
 			})
 		})
-		// it('支持input事件',()=>{
-		// 	vm = new Constructor({
-		// 	}).$mount()
-		// 	const callback = sinon.fake()
-		// 	vm.$on('input',callback)
-		// 	// 触发input的input事件
-		// 	let event = new Event('input')
-		// 	const inputElement = vm.$el.querySelector('input')
-		// 	inputElement.dispatchEvent(event)
-		// 	// 希望触发input事件，且第一个回调函数是event
-		// 	expect(callback).to.have.been.calledWith(event)
-		// })
-		// it('支持blur事件',()=>{
-		// 	vm = new Constructor({
-		// 	}).$mount()
-		// 	const callback = sinon.fake()
-		// 	vm.$on('blur',callback)
-		// 	// 触发input的input事件
-		// 	let event = new Event('blur')
-		// 	const inputElement = vm.$el.querySelector('input')
-		// 	inputElement.dispatchEvent(event)
-		// 	// 希望触发blur事件，且第一个回调函数是event
-		// 	expect(callback).to.have.been.calledWith(event)
-		// })
-		// it('支持focus事件',()=>{
-		// 	vm = new Constructor({
-		// 	}).$mount()
-		// 	const callback = sinon.fake()
-		// 	vm.$on('focus',callback)
-		// 	// 触发input的focus事件
-		// 	let event = new Event('focus')
-		// 	const inputElement = vm.$el.querySelector('input')
-		// 	inputElement.dispatchEvent(event)
-		// 	// 希望触发blur事件，且第一个回调函数是event
-		// 	expect(callback).to.have.been.calledWith(event)
-		// })
 	})
 
 })

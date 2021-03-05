@@ -42,7 +42,8 @@
     </g-button-group> -->
 
     <g-input value="张三" disabled></g-input>
-    <g-input value="李四"></g-input>
+    <g-input value="李四" v-model="message"></g-input>
+    <div>{{message}}</div>
     <g-input value="王五" readonly></g-input>
     <g-input value="zxx" error="姓名不小于3个字" @change="inputChange"></g-input>
     <div id="test"></div>
