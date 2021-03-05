@@ -1,6 +1,6 @@
 <template>
   <!-- 单文件组件 -->
-  <button class="g-button" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
+  <button class="g-button hyj" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
 		<g-icon name='loading' class="loading icon" v-if="loading"></g-icon>
 		<g-icon v-if="icon && !loading" :name="icon" class="icon"></g-icon>
     <slot></slot>
