@@ -35,15 +35,21 @@
 </head>
 <body>
   <div id="app">
-    <g-row>
+    <!-- <g-row>
       <g-col span="2"></g-col>
       <g-col span="22"></g-col>
-    </g-row>
-    <g-row>
-      <g-col></g-col>
-      <g-col></g-col>
-      <g-col></g-col>
-    </g-row>
+    </g-row> -->
+    <div style="border:1px solid black">
+      <g-row gutter="30">
+        <g-col span="10" offset="2">1</g-col>
+        <g-col span="12">2</g-col>
+      </g-row>
+    </div>
+    <!-- <g-row>
+      <g-col span="4"></g-col>
+      <g-col span="8" offset="2"></g-col>
+      <g-col span="7" offset="3"></g-col>
+    </g-row> -->
     <!-- <g-button icon="settings" :loading='loading1' @click="loading1=!loading1">按钮</g-button>
     <g-button :loading='true'>按钮</g-button>
     <g-button icon-position='right' icon="settings" :loading='true'>按钮</g-button>
