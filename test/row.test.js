@@ -21,6 +21,7 @@ describe('Row', () => {
     }).$mount(div)
     const element = vm.$el
     expect(getComputedStyle(element).justifyContent).to.equal('center')
+    div.remove()
     vm.$destroy()
   })
   it('接受gutter属性.', (done) => {
@@ -45,7 +46,7 @@ describe('Row', () => {
       expect(getComputedStyle(cols[0]).paddingRight).to.eq('10px')
       expect(getComputedStyle(cols[1]).paddingLeft).to.eq('10px')
       done()
-      vm.$el.remove()
+      div.remove()
       vm.destroy()
     },0)
   })
