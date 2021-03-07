@@ -1,5 +1,5 @@
 <template>
-  <div class="toast" ref="warpper">
+  <div ref="warpper" :class="`${toastClass} toast`">
     <div class="message">
       <div v-html="$slots.default[0]" v-if="enableHtml"></div>
       <slot v-else></slot>
@@ -36,8 +36,15 @@ export default {
           text: "关闭",
           callback: undefined,
         };
-      },
+      }
     },
+    position:{
+      type:String,
+      default:'top',
+      validator(value){
+        return ['top','bottom','middle'].includes(value)
+      }
+    }
   },
   methods: {
     execAutoClose() {
@@ -69,6 +76,11 @@ export default {
     this.execAutoClose();
     this.updateStyles();
   },
+  computed:{
+    toastClass(){
+      return `position-${this.position}`
+    }
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -81,7 +93,6 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   line-height: 1.8;
   min-height: $toast-min-height;
   position: fixed;
-  top: 0;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -101,6 +112,16 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     height: 100%;
     border-left: 1px solid #666;
     margin-left: 16px;
+  }
+  &.position-top {
+    top: 0;
+  }
+  &.position-middle {
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &.position-bottom {
+    bottom: 0;
   }
 }
 </style>
