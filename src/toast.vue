@@ -1,11 +1,15 @@
 <template>
-  <div ref="warpper" :class="`${toastClass} toast`">
-    <div class="message">
-      <div v-html="$slots.default[0]" v-if="enableHtml"></div>
-      <slot v-else></slot>
+  <div class="wrapper" :class="`${toastClass}`">
+    <div ref="toast" class="toast">
+      <div class="message">
+        <div v-html="$slots.default[0]" v-if="enableHtml"></div>
+        <slot v-else></slot>
+      </div>
+      <div class="line" ref="line"></div>
+      <span v-if="closeButton" class="close" @click="onClickClose">{{
+        closeButton.text
+      }}</span>
     </div>
-          <div class="line" ref="line"></div>
-      <span v-if="closeButton" class="close" @click="onClickClose">{{closeButton.text}}</span>
   </div>
 </template>
 <script>
@@ -36,15 +40,15 @@ export default {
           text: "关闭",
           callback: undefined,
         };
-      }
+      },
     },
-    position:{
-      type:String,
-      default:'top',
-      validator(value){
-        return ['top','bottom','middle'].includes(value)
-      }
-    }
+    position: {
+      type: String,
+      default: "top",
+      validator(value) {
+        return ["top", "bottom", "middle"].includes(value);
+      },
+    },
   },
   methods: {
     execAutoClose() {
@@ -57,13 +61,13 @@ export default {
     updateStyles() {
       this.$nextTick(() => {
         this.$refs.line.style.height = `${
-          this.$refs.warpper.getBoundingClientRect().height
+          this.$refs.toast.getBoundingClientRect().height
         }px`;
       });
     },
     close() {
       this.$el.remove();
-      this.$emit('close')
+      this.$emit("close");
       this.$destroy();
     },
     onClickClose() {
@@ -77,30 +81,78 @@ export default {
     this.execAutoClose();
     this.updateStyles();
   },
-  computed:{
-    toastClass(){
-      return `position-${this.position}`
-    }
-  }
+  computed: {
+    toastClass() {
+      return `position-${this.position}`;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 $font-size: 14px;
 $toast-min-height: 40px;
 $toast-bg: rgba(0, 0, 0, 0.75);
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
 @keyframes fade-in {
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.wrapper {
+  position: fixed;
+  transform: translateX(-50%);
+  left: 50%;
+  &.position-top {
+    top: 0;
+    .toast {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      animation: slide-down 1s;
+    }
+  }
+  &.position-middle {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .toast {
+      animation: fade-in 1s;
+    }
+  }
+  &.position-bottom {
+    bottom: 0;
+    .toast {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      animation: slide-up 1s;
+    }
+  }
 }
 .toast {
-  animation: fade-in 1s;
   font-size: $font-size;
   color: white;
   line-height: 1.8;
   min-height: $toast-min-height;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
   background: $toast-bg;
@@ -118,16 +170,6 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     height: 100%;
     border-left: 1px solid #666;
     margin-left: 16px;
-  }
-  &.position-top {
-    top: 0;
-  }
-  &.position-middle {
-    top: 50%;
-    transform: translate(-50%,-50%);
-  }
-  &.position-bottom {
-    bottom: 0;
   }
 }
 </style>

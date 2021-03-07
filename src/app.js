@@ -39,9 +39,18 @@ new Vue({
     
   },
   methods:{
-    showToast(){
+    showToast1(){
       this.$toast(`${Math.random()*200}但是该代码侵入性`,{
-        enableHtml:true,
+        position:'top'
+    })
+    },
+    showToast2(){
+      this.$toast(`${Math.random()*200}但是该代码侵入性`,{
+        position:'middle'
+    })
+    },
+    showToast3(){
+      this.$toast(`${Math.random()*200}但是该代码侵入性`,{
         position:'bottom'
     })
     }
