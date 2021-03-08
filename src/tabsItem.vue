@@ -5,6 +5,7 @@
 </template>
 <script>
 export default {
+  name:'GuluTabsItem',
   inject: ["eventBus"],
   data() {
     return {
@@ -30,16 +31,12 @@ export default {
   },
   methods: {
     xxx() {
-      this.eventBus.$emit("update:selected", this.name);
+      this.eventBus.$emit("update:selected", this.name,this);
     },
   },
   mounted() {
     this.eventBus.$on("update:selected", (name) => {
       this.active = name === this.name;
-      console.log(name);
-      if (this.active) {
-        console.log("我被选中了");
-      }
     });
   },
 };
@@ -53,7 +50,7 @@ export default {
   align-items: center;
   cursor: pointer;
   &.active {
-    background: red;
+    color: #1890ff;
   }
 }
 </style>
