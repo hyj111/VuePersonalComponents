@@ -27,11 +27,13 @@ export default {
     }
   },
   mounted(){
+    if(this.$children.length ===0) {
+      console.warn('tabs子组件应该是tabs-head和tabs-nav,但你没有写子组件')
+    }
     this.$children.forEach(vm=>{
       if(vm.$options.name === 'GuluTabsHead'){
         vm.$children.forEach(item=>{
           if(item.$options.name === 'GuluTabsItem' && item.name === this.selected) {
-            console.log(item.$el);
             this.eventBus.$emit('update:selected',this.selected,item)
           }
         })
