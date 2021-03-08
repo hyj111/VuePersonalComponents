@@ -20,7 +20,7 @@ $tab-height:40px;
 .tabs-head {
   display: flex;
   height: $tab-height;
-  align-items: center;
+  
   border: 1px solid red;
   > .actions-wrapper {
     margin-left: auto;
