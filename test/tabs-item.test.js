@@ -34,7 +34,7 @@ describe('TabsItem', () => {
     const Constructor = Vue.extend(TabsItem)
     const vm = new Constructor({
       propsData: {
-        disabled: false,
+        disabled: true,
       }
     }).$mount()
     expect(vm.$el.classList.contains('disabled')).to.be.true
