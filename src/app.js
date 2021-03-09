@@ -43,34 +43,11 @@ new Vue({
   el: '#app',
   data() {
     return {
-      selectedTab:'sports'
     }
   },
   created(){
     
   },
   methods:{
-    showToast1(){
-      this.$toast(`${Math.random()*200}但是该代码侵入性`,{
-        autoCloseDelay:1,
-        position:'top'
-    })
-    },
-    showToast2(){
-      this.$toast(`${Math.random()*200}但是该代码侵入性`,{
-        position:'middle',
-        closeButton:{
-          text:'444',
-          callback:()=>{
-            console.log(555);
-          }
-        }
-    })
-    },
-    showToast3(){
-      this.$toast(`${Math.random()*200}但是该代码侵入性`,{
-        position:'bottom'
-    })
-    }
   }
 })
