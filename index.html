@@ -28,7 +28,9 @@
       --border-color-hover: #666;
     }
 
-    #app {}
+    #app {
+      padding: 100px;
+    }
 
     body {
       font-size: var(--font-size);
@@ -40,26 +42,22 @@
 
 <body>
   <div id="app">
-    <g-tabs :selected.sync="selectedTab">
-    <!-- <g-tabs selected="selectedTab" @update:selected="selectedTab = $event"> 和上面的等价 -->
-      <g-tabs-head>
-        <g-tabs-item name="women">
-          <g-icon name="settings"></g-icon>
-          美女
-        </g-tabs-item>
-        <g-tabs-item name="finace" disabled>财经</g-tabs-item>
-        <g-tabs-item name="sports">体育</g-tabs-item>
-        <template slot="actions">
-          <g-button>设置</g-button>
-        </template>
-      </g-tabs-head>
-      <g-tabs-body>
-        <g-tabs-pane name="women"> 美女相关</g-tabs-pane>
-        <g-tabs-pane name="finace">财经相关</g-tabs-pane>
-        <g-tabs-pane name="sports">体育相关</g-tabs-pane>
-      </g-tabs-body>
-    </g-tabs>
+    <g-popover>
+      <template slot="content">
+        <div>popover内容1</div>
+      </template>
+        <g-button>点我</g-button>
+    </g-popover>
+
+    <g-popover>
+      <template slot="content">
+        <div>popover内容2</div>
+      </template>
+        <g-button>点我</g-button>
+    </g-popover>
   </div>
+
+  
 </body>
 <script src="./src/app.js"></script>
 
