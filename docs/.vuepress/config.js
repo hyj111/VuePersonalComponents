@@ -1,5 +1,5 @@
 module.exports = {
-  base:"/gaily-ui-official-website/",
+  base:"/VuePersonalComponents/",
   title: 'Gaily-UI',
   description: 'Just playing around',
   themeConfig: {
