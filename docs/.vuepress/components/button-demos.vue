@@ -1,5 +1,11 @@
 <template>
   <div class="container">
+    <g-button type="primary" >主要按钮</g-button>
+    <g-button type="success">成功按钮</g-button>
+    <g-button type="info">信息按钮</g-button>
+    <g-button type="warning">警告按钮</g-button>
+    <g-button type="danger">危险按钮</g-button>
+    <br><br>
     <g-button>默认按钮</g-button>
     <g-button icon="settings">默认按钮</g-button>
     <g-button :loading="true">默认按钮</g-button>
@@ -8,9 +14,11 @@
 </template>
 <script>
   import Button from '../../../src/button'
+  import ButtonGroup from '../../../src/button-group';
   export default {
     components: {
-      'g-button': Button
+      'g-button': Button,
+      'g-button-group':ButtonGroup
     }
   }
 </script>
