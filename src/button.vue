@@ -31,7 +31,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
       $button-height: 32px;
       $font-size: 14px;
       $button-bg: white;
