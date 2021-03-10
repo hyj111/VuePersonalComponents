@@ -3,7 +3,7 @@ title: Popover 弹出框
 ---
 # Popover 弹出框
 
-<popover-demo-1></popover-demo-1>
+<ClientOnly><popover-demo-1></popover-demo-1></ClientOnly>
 
 ::: details 点击查看源码
 ```vue
@@ -42,7 +42,7 @@ export default {
 ```
 :::
 
-<popover-demo-2></popover-demo-2>
+<ClientOnly><popover-demo-2></popover-demo-2></ClientOnly>
 ::: details 点击查看源码
 ```vue
 <g-popover trigger="hover">

@@ -3,7 +3,7 @@ title: Layout 布局
 ---
 # Layout 布局
 
-<layout-demo-1></layout-demo-1>
+<ClientOnly><layout-demo-1></layout-demo-1></ClientOnly>
 
 ::: details 点击查看源码
 ```vue

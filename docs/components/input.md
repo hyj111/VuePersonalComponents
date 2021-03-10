@@ -4,7 +4,7 @@ title: Input 输入框
 # Input 输入框
 
 使用方法
-<input-demo-1></input-demo-1>
+<ClientOnly><input-demo-1></input-demo-1></ClientOnly>
 
 ::: details 点击查看源码
 ```vue
@@ -15,7 +15,7 @@ title: Input 输入框
 ```
 :::
 
-<input-demo-2></input-demo-2>
+<ClientOnly><input-demo-2></input-demo-2></ClientOnly>
 ::: details 点击查看源码
 ```vue
 <g-input error="用户名不低于两个字"></g-input>

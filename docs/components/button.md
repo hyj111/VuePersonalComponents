@@ -3,7 +3,7 @@ title: Button 按钮
 ---
 # Button 按钮
 
-<button-demos></button-demos>
+<ClientOnly><button-demos></button-demos></ClientOnly>
 
 ::: details 点击查看源码
 ```vue

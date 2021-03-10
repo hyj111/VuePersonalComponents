@@ -3,7 +3,7 @@ title: Grid 栅格
 ---
 # Grid 栅格
 
-<grid-demo-1></grid-demo-1>
+<ClientOnly><grid-demo-1></grid-demo-1></ClientOnly>
 
 ::: details 点击查看源码
 ```vue
@@ -94,7 +94,7 @@ title: Grid 栅格
 :::
 
 
-<grid-demo-2></grid-demo-2>
+<ClientOnly><grid-demo-2></grid-demo-2></ClientOnly>
 
 ::: details 点击查看源码
 ```vue
@@ -125,7 +125,7 @@ title: Grid 栅格
 </g-row>
 ```
 :::
-<grid-demo-3></grid-demo-3>
+<ClientOnly><grid-demo-3></grid-demo-3></ClientOnly>
 
 ::: details 点击查看源码
 ```vue

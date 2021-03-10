@@ -1,4 +1,5 @@
 module.exports = {
+  base:"/gaily-ui-official-website/",
   title: 'Gaily-UI',
   description: 'Just playing around',
   themeConfig: {

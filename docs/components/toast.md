@@ -3,7 +3,7 @@ title: Toast 文字提示
 ---
 # Toast 文字提示
 
-<toast-demo-1></toast-demo-1>
+<ClientOnly><toast-demo-1></toast-demo-1></ClientOnly>
 
 ::: details 点击查看源码
 ```vue

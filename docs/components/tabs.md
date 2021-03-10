@@ -3,7 +3,7 @@ title: Tabs 标签页
 ---
 # Tabs 标签页
 
-<tabs-demos></tabs-demos>
+<ClientOnly><tabs-demos></tabs-demos></ClientOnly>
 
 ::: details 点击查看源码
 ```vue
