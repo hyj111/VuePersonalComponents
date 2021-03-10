@@ -120,6 +120,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
   }
 }
 .wrapper {
+  z-index: 30 !important;
   position: fixed;
   transform: translateX(-50%);
   left: 50%;
@@ -162,6 +163,7 @@ $toast-bg: rgba(0, 0, 0, 0.75);
     padding: 8px 0;
   }
   .close {
+    cursor: pointer;
     padding-left: 16px;
     flex-shrink: 0;
   }
