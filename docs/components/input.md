@@ -1,7 +1,7 @@
 ---
-title: Input
+title: Input 输入框
 ---
-# Input
+# Input 输入框
 
 使用方法
 <input-demo-1></input-demo-1>
@@ -22,4 +22,12 @@ title: Input
 <g-input v-model="value"></g-input>
 ```
 :::
+
+# Attributes
+|参数| 说明 |  类型  | 可选值 | 默认值 |
+| :-------------: |:-------------:| :-----:|:-----:|:-----:|
+|value| 设置默认内容 | String |--|-- 
+|disabled| 是否禁用状态 | Boolean |true, false|false
+|readonly| 是否只读状态 | Boolean |true, false|false
+|error| 错误信息 | String |--|-- 
 

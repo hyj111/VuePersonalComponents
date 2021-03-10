@@ -7,7 +7,7 @@ title:快速上手
 ### npm 安装
 
 ```bash
-npm i ice-vue-ui -S
+npm i vuepersonalcomponents -S
 ```
 
 ### 开始使用
@@ -22,21 +22,21 @@ npm i ice-vue-ui -S
 
 IE 8及以上浏览器都支持此样式
 
-2. 引入 ice-vue-ui
+2. 引入 vuepersonalcomponents
 
 按需引入需要的组件，以达到减小项目体积的目的。
 
 需要注意的是，样式文件要记得引入以后会进行进一步优化。
 
 ```js
-import {Button, ButtonGroup, Icon} from 'ice-vue-ui'
-import 'ice-vue-ui/dist/index.css'
+import {Button, ButtonGroup, Icon} from 'vuepersonalcomponents'
+import 'vuepersonalcomponents/dist/index.css'
 
 export default {
   name: 'app',
   components: {
-    'i-button': Button,
-    'i-icon': Icon
+    'g-button': Button,
+    'g-icon': Icon
   }
 }
 ```
@@ -64,11 +64,9 @@ import {
     TabsBody,
     TabsItem,
     TabsPane,
-    Popover,
-    Collapse,
-    CollapseItem
+    Popover
 
-} from 'ice-vue-ui'
+} from 'vuepersonalcomponents'
 
 Vue.component('i-button', Button)
 Vue.component('i-icon', Icon)
@@ -88,6 +86,4 @@ Vue.component('i-tabs-body',TabsBody)
 Vue.component('i-tabs-item',TabsItem)
 Vue.component('i-tabs-pane',TabsPane)
 Vue.component('i-popover',Popover)
-Vue.component('i-collapse',Collapse)
-Vue.component('i-collapse-item',CollapseItem)
 ```

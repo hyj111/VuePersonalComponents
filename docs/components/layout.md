@@ -1,7 +1,7 @@
 ---
-title: Layout布局
+title: Layout 布局
 ---
-# Layout
+# Layout 布局
 
 <layout-demo-1></layout-demo-1>
 
@@ -49,7 +49,6 @@ title: Layout布局
 }
 .sider {
   background-color: #3ba0e9;
-  // height: 100px;
   width: 100px;
 }
 .content {

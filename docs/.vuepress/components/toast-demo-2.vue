@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top: 16px;">
+  <div style="padding-top: 16px">
     <h2>支持 HTML</h2>
     <p>
       <strong>预览</strong>
@@ -11,23 +11,24 @@
   </div>
 </template>
 <style scoped>
-  * {
-    box-sizing: border-box;
-  }
+* {
+  box-sizing: border-box;
+
+}
 </style>
 <script>
-  import plugin from '../../../src/plugin'
-  import GButton from '../../../src/button'
-  import Vue from 'vue'
-  Vue.use(plugin)
-  export default {
-    components: {GButton},
-    methods: {
-      onClickButton () {
-        this.$toast('<strong style="color:red;">可传入html元素</strong>', {
-          enableHtml: true
-        })
-      }
+import plugin from "../../../src/plugin";
+import GButton from "../../../src/button";
+import Vue from "vue";
+Vue.use(plugin);
+export default {
+  components: { GButton },
+  methods: {
+    onClickButton() {
+      this.$toast('<strong style="color:red;">可传入html元素</strong>', {
+        enableHtml: true,
+      });
     },
-  }
+  },
+};
 </script>

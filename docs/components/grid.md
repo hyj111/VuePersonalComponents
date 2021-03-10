@@ -1,7 +1,7 @@
 ---
-title: Grid栅格
+title: Grid 栅格
 ---
-# Grid
+# Grid 栅格
 
 <grid-demo-1></grid-demo-1>
 

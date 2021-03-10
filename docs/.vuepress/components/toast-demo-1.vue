@@ -18,6 +18,7 @@
   * {
     box-sizing: border-box;
   }
+  
 </style>
 <script>
   import plugin from '../../../src/plugin'

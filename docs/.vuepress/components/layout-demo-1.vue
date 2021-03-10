@@ -1,9 +1,5 @@
 <template>
-  <div style="padding-top: 16px">
-    <h2>布局</h2>
-    <p>
-      <strong>预览</strong>
-    </p>
+  <div class="container">
     <div class="wrapper">
       <g-layout class="layout">
         <g-header class="header"> header </g-header>
@@ -62,6 +58,13 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+  .container {
+    max-width: 800px;
+    margin: 30px auto;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+    padding: 15px;
+  }
 * {
   box-sizing: border-box;
 }

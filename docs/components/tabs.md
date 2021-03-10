@@ -1,7 +1,7 @@
 ---
-title: Tabs
+title: Tabs 标签页
 ---
-# Tabs
+# Tabs 标签页
 
 <tabs-demos></tabs-demos>
 
